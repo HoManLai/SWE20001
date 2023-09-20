@@ -20,6 +20,19 @@
 		<a href="#">Link 4</a>
 		</div>
 	</div>
+	<!--Filter button-->
+	<div id="filterMem">
+		<!--Add filterSelection-->
+		<button class="btn active" onclick="filterSelection('all')"> Show all</button>
+		<button class="btn" onclick="filterSelection('...')">...</button>
+		<button class="btn" onclick="filterSelection('...')">...</button>
+		<button class="btn" onclick="filterSelection('...')"> ...</button>
+		<button class="btn" onclick="filterSelection('...')">...</button>
+	</div>
+	<!--Sort by Asc or Desec alphabetically-->
+	<button onclick="sortList()">Sort</button>
+	<!--Generate Report-->
+	<button onclick="">Generate Report</button>
 	<!--Table for showing members information-->
 	<table style="border: 1px solid black;">
 		<caption>Members List</caption>
