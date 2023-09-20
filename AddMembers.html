@@ -11,19 +11,32 @@
 </head>
 <body>
 <h1>Member Managment System</h1>
+<h1>Register</h1>
+<h2>New Member Registration Form</h2>
 
-<h2>Member Details</h2>
+<!--Hoverable Menu (Add CSS to make it dropdown)-->
+<div class="Meun">
+    <button class="Meun">Menu</button>
+    <div class="Meun">
+        <!--Add the html links-->
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+      <a href="#">Link 4</a>
+    </div>
+  </div>
+
     <form action="" method="POST"> <!--need to add a sv script file like ProcessMember.php to take info and send to DB-->
 	<!--Name-->
-	<label for="fname">First name:</label>
+	<label for="fname">First name: &#42;</label>
         <input type="text" id="fname" name="First_name" required><br><br>
-	<label for="lname">Last Name:</label>
+	<label for="lname">Last Name: &#42;</label>
         <input type="text" id="lname" name="Last_name" required><br><br>
 	<!--DOB-->
 	<label for="dob">Date of Birth:</label>
 	<input type="date" id="dob" name="DOB"><br><br>
 	<!--Phone Num-->
-        <label for="phone">Phone Number:</label>
+        <label for="phone">Phone Number: &#42;</label>
         <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}"><br><br>
 	<!--Email-->
         <label for="email">Email:</label>
@@ -44,7 +57,8 @@
 		</select>
         <label for="pcode">Postcode:</label>
         <input type="text" id="pcode" name="postcode" required pattern="[0-9]{4}" maxlength="4"><br><br>
-	<!--Display Icon-->
+	
+        <!--Display Icon-->
 	<p>Display Icon</p>
 	 <label for="icon1">
             <input type="radio" id="icon1" name="icon" value="">
@@ -62,6 +76,9 @@
         </label><br><br>
 	    
         <input type="submit" value="Submit">
+        <input type="reset" value="Clear">
+        <!--Add the page in onclick-->
+        <button onclick="">Back</button>
     </form>
 
 </body>
