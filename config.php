@@ -6,5 +6,9 @@
     $dbPort = 3306;
 
    /// new connection
-    $con = new mysqli($_SERVER[$dbHost], $_SERVER[$dbUsername], $_SERVER[$dbPassword], $_SERVER[$dbName], $_SERVER[$dbPort]);
+    $conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+    if ($conn->connect_error) {
+        die('Connection failure: ' . $conn->connect_error);
+    }
+
 ?>
