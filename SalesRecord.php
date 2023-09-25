@@ -2,20 +2,32 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8"/>
-	<meta name="description"	content="Display the Sales Record"/>
+	<meta name="description"	content="Display tde Sales Record"/>
 	<meta name="keywords"		  content="HTML, CSS, PHP, JavaScript"/>
-	<meta name="author"			  content="MSP_CL4_T2"/>
+	<meta name="autdor"			  content="MSP_CL4_T2"/>
     <title>Sales Record</title>
 
+    <script src="script src="scripts/session.js"></script>
 </head>
 <body>
     <!--Company Logo-->
+<<<<<<< HEAD
     <img src="Goto_Logo.png" alt="Goto Logo"  width="50" height="50" style="float:Left;">
+=======
+    <img src="Goto_Logo.png" alt="Goto Logo"  widtd="50" height="50" style="float:Left;"">
+>>>>>>> 29227a205395382e27ee68fefa93bfe969e1d0b0
 	
     <h1>Member Managment System</h1>
     
     <button class="Meun">Menu</button>
 		<div class="Meun">
+<<<<<<< HEAD
+			<!--Add tde html links-->
+		<a href="#">Link 1</a>
+		<a href="#">Link 2</a>
+		<a href="#">Link 3</a>
+		<a href="#">Link 4</a>
+=======
 			<!--Add the html links-->
 		<a href="Main.html">Main</a>
 		<a href="AddMembers.html"> Member Registration</a>
@@ -27,6 +39,7 @@
         <!--
         <a href="SalesReport.html">Link 4</a>
 		-->
+>>>>>>> bf266f7a1c3d6b3bf2be70a38b6dca0dfc3355c7
 		</div>
 	<!--Filter button-->
 	<div id="filterMem">
@@ -67,10 +80,10 @@
     ?>
 
     <td><?php echo $row['saleID']; ?></td>
-    <th><?php echo $row['memID']; ?></th>
-    <th><?php echo $row['pdID']; ?></th>
-    <th><?php echo $row['salePrice']; ?></th>
-    <th><?php echo $row['quantity']; ?></th>
+    <td><?php echo $row['memID']; ?></td>
+    <td><?php echo $row['pdID']; ?></td>
+    <td><?php echo $row['salePrice']; ?></td>
+    <td><?php echo $row['quantity']; ?></td>
     </tr>
 
     <?php 

@@ -1,5 +1,8 @@
 --data dump
 
+s
+
+
 INSERT INTO product (memID, memFirst, memLast, phone, email, streetName, suburb, state, postcode, dob)
 VALUES
 ('1', 'Ella', 'Smith', '0412345678', 'ella.smith@example.com', '123 Main Street', 'Sydney', 'NSW', '2000', '1985-05-12'),
