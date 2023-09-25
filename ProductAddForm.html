@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="description"	content="List displaying members detail"/>
+	<meta name="keywords"		  content="HTML, CSS, PHP, JavaScript"/>
+	<meta name="author"			  content="MSP_CL4_T2"/>
+	<title>Product Add</title>
+
+</head>
+<body>
+	<!--Company Logo-->
+    <img src="Goto_Logo.png" alt="Goto Logo"  width="50" height="50" style="float:Left;"">
+
+	<h1>Member Managment System</h1>
+	
+	<!--Hoverable Menu (Add CSS to make it dropdown)-->
+	<div class="Meun">
+		<button class="Meun">Menu</button>
+		<div class="Meun">
+			<!--Add the html links-->
+		<a href="#">Link 1</a>
+		<a href="#">Link 2</a>
+		<a href="#">Link 3</a>
+		<a href="#">Link 4</a>
+		</div>
+	</div>
+	<!--Filter button-->
+	<div id="filterMem">
+		<!--Add filterSelection-->
+		<button class="btn active" onclick="filterSelection('all')"> Show all</button>
+		<button class="btn" onclick="filterSelection('...')">...</button>
+		<button class="btn" onclick="filterSelection('...')">...</button>
+		<button class="btn" onclick="filterSelection('...')"> ...</button>
+		<button class="btn" onclick="filterSelection('...')">...</button>
+	</div>
+	
+	<form method="post" action="ProductAdd.php">
+		<fieldset><legend>New Product Details</legend>
+			<p><label for "pdName">Name: </p>
+				<input type="text" name="pdName" id="pdName" /></p>
+			<p><label for "category">Category: </p>
+				<input type="text" name="category" id="category" /></p>
+			<p><label for "price">Price: </p>
+				<input type="text" name="price" id="price" /></p>
+			<p><label for "supplier">Supplier: </p>
+				<input type="text" name="supplier" id="supplier" /></p>
+			<p><label for "description">Description: </p>
+				<textarea rows="3" name="description" id="description" />
+	
+			
+			<p><input type="submit" name="Add New Product"/></p>
+	</form>
+
+</body>
+</html>

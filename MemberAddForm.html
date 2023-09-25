@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="description"	content="List displaying members detail"/>
+	<meta name="keywords"		  content="HTML, CSS, PHP, JavaScript"/>
+	<meta name="author"			  content="MSP_CL4_T2"/>
+	<title>Members Add</title>
+
+</head>
+<body>
+	<!--Company Logo-->
+    <img src="Goto_Logo.png" alt="Goto Logo"  width="50" height="50" style="float:Left;"">
+
+	<h1>Member Managment System</h1>
+	
+	<!--Hoverable Menu (Add CSS to make it dropdown)-->
+	<div class="Meun">
+		<button class="Meun">Menu</button>
+		<div class="Meun">
+			<!--Add the html links-->
+		<a href="#">Link 1</a>
+		<a href="#">Link 2</a>
+		<a href="#">Link 3</a>
+		<a href="#">Link 4</a>
+		</div>
+	</div>
+	<!--Filter button-->
+	<div id="filterMem">
+		<!--Add filterSelection-->
+		<button class="btn active" onclick="filterSelection('all')"> Show all</button>
+		<button class="btn" onclick="filterSelection('...')">...</button>
+		<button class="btn" onclick="filterSelection('...')">...</button>
+		<button class="btn" onclick="filterSelection('...')"> ...</button>
+		<button class="btn" onclick="filterSelection('...')">...</button>
+	</div>
+
+	<p></p>
+	
+	<form method="post" action="MemberAdd.php">
+		<fieldset><legend>New Member Details</legend>
+			<p><label for "memFirst">First Name: </p>
+				<input type="text" name="memFirst" id="memFirst" /></p>
+			<p><label for "memLast">Last Name: </p>
+				<input type="text" name="memLast" id="memLast" /></p>
+			<p><label for "phone">Phone Number: </p>
+				<input type="text" name="phone" id="phone" /></p>
+			<p><label for "email">Email: </p>
+				<input type="text" name="email" id="email" /></p>
+			<p><label for "streetName">Address: </p>
+				<input type="text" name="streetName" id="streetName" /></p>
+			<p><label for "suburb">Suburb: </p>
+				<input type="text" name="suburb" id="suburb" /></p>
+			<p><label for="state">State:</label>
+				<select id="state" name="state">
+				<option value="ACT">ACT</option>
+				<option value="NSW">NSW</option>
+				<option value="NT">NT</option>
+				<option value="SA">SA</option>
+				<option value="TAS">TAS</option>
+				<option value="VIC">VIC</option>
+				<option value="WA">WA</option>
+				</select>
+			<p><label for "postcode">Postcode: </p>
+				<input type="text" name="postcode" id="postcode" /></p>
+			<p><label for "dob">Date of Birth: </p>
+				<input type="date" name="dob" id="dob" /></p>
+			
+			<p><input type="submit" name="Add New Member"/></p>
+	</form>
+
+</body>
+</html>

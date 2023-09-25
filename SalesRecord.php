@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8"/>
-	<meta name="description"	content="Display the Sales Record"/>
+	<meta name="description"	content="Display tde Sales Record"/>
 	<meta name="keywords"		  content="HTML, CSS, PHP, JavaScript"/>
-	<meta name="author"			  content="MSP_CL4_T2"/>
+	<meta name="autdor"			  content="MSP_CL4_T2"/>
     <title>Sales Record</title>
 
+    <script src="script src="scripts/session.js"></script>
 </head>
 <body>
     <!--Company Logo-->
-    <img src="Goto_Logo.png" alt="Goto Logo"  width="50" height="50" style="float:Left;"">
+    <img src="Goto_Logo.png" alt="Goto Logo"  widtd="50" height="50" style="float:Left;"">
 	
     <h1>Member Managment System</h1>
     
@@ -18,7 +19,7 @@
     <div class="Meun">
 		<button class="Meun">Menu</button>
 		<div class="Meun">
-			<!--Add the html links-->
+			<!--Add tde html links-->
 		<a href="#">Link 1</a>
 		<a href="#">Link 2</a>
 		<a href="#">Link 3</a>
@@ -64,10 +65,10 @@
     ?>
 
     <td><?php echo $row['saleID']; ?></td>
-    <th><?php echo $row['memID']; ?></th>
-    <th><?php echo $row['pdID']; ?></th>
-    <th><?php echo $row['salePrice']; ?></th>
-    <th><?php echo $row['quantity']; ?></th>
+    <td><?php echo $row['memID']; ?></td>
+    <td><?php echo $row['pdID']; ?></td>
+    <td><?php echo $row['salePrice']; ?></td>
+    <td><?php echo $row['quantity']; ?></td>
     </tr>
 
     <?php 

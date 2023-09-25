@@ -7,6 +7,7 @@
 	<meta name="author"			  content="MSP_CL4_T2"/>
 	<title>Members List</title>
 
+	<script src="script src="scripts/session.js"></script>
 </head>
 <body>
 	<!--Company Logo-->
@@ -90,6 +91,9 @@
 		?>
 
 	</table>
-</body>
+
+	<a href="MemberEditForm.html">Edit Members</a>
+	<a href="MemberAddForm.html">Add Members</a>
+
 </body>
 </html>
