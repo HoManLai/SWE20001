@@ -11,7 +11,11 @@
 </head>
 <body>
     <!--Company Logo-->
+<<<<<<< HEAD
+    <img src="Goto_Logo.png" alt="Goto Logo"  width="50" height="50" style="float:Left;">
+=======
     <img src="Goto_Logo.png" alt="Goto Logo"  widtd="50" height="50" style="float:Left;"">
+>>>>>>> 29227a205395382e27ee68fefa93bfe969e1d0b0
 	
     <h1>Member Managment System</h1>
     

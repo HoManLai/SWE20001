@@ -11,7 +11,7 @@
 </head>
 <body>
 	<!--Company Logo-->
-    <img src="Goto_Logo.png" alt="Goto Logo"  width="50" height="50" style="float:Left;"">
+    <img src="Goto_Logo.png" alt="Goto Logo"  width="50" height="50" style="float:Left;">
 
 	<h1>Member Managment System</h1>
 	
@@ -30,6 +30,7 @@
         <!--
         <a href="SalesReport.html">Link 4</a>
         -->
+		<a href="SalesRecord.php">Add product form</a>
 		</div>
 	<!--Filter button-->
 	<div id="filterMem">
