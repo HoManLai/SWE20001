@@ -15,17 +15,28 @@
 	
     <h1>Member Managment System</h1>
     
-    <!--Hoverable Menu (Add CSS to make it dropdown)-->
-    <div class="Meun">
-		<button class="Meun">Menu</button>
+    <button class="Meun">Menu</button>
 		<div class="Meun">
+<<<<<<< HEAD
 			<!--Add tde html links-->
 		<a href="#">Link 1</a>
 		<a href="#">Link 2</a>
 		<a href="#">Link 3</a>
 		<a href="#">Link 4</a>
+=======
+			<!--Add the html links-->
+		<a href="Main.html">Main</a>
+		<a href="AddMembers.html"> Member Registration</a>
+        <a href="MemberList.php">Members List</a>
+		<!--
+        <a href="MemberProfile.html">Members Profile</a>
+        -->
+        <a href="SalesRecord.php">Sales Record List</a>
+        <!--
+        <a href="SalesReport.html">Link 4</a>
+		-->
+>>>>>>> bf266f7a1c3d6b3bf2be70a38b6dca0dfc3355c7
 		</div>
-	</div>
 	<!--Filter button-->
 	<div id="filterMem">
 		<!--Add filterSelection-->
