@@ -21,13 +21,13 @@
     
     <button class="Meun">Menu</button>
 		<div class="Meun">
-<<<<<<< HEAD
+
 			<!--Add tde html links-->
 		<a href="#">Link 1</a>
 		<a href="#">Link 2</a>
 		<a href="#">Link 3</a>
 		<a href="#">Link 4</a>
-=======
+
 			<!--Add the html links-->
 		<a href="Main.html">Main</a>
 		<a href="AddMembers.html"> Member Registration</a>
@@ -39,7 +39,7 @@
         <!--
         <a href="SalesReport.html">Link 4</a>
 		-->
->>>>>>> bf266f7a1c3d6b3bf2be70a38b6dca0dfc3355c7
+
 		</div>
 	<!--Filter button-->
 	<div id="filterMem">
