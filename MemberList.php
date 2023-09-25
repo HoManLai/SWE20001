@@ -30,6 +30,7 @@
         <!--
         <a href="SalesReport.html">Link 4</a>
         -->
+		<a href="SalesRecord.php">Add product form</a>
 		</div>
 	<!--Filter button-->
 	<div id="filterMem">
