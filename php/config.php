@@ -1,14 +1,11 @@
 <?php
-    $dbHost = "dbgotogro.cmibhz6gn2ip.us-east-1.rds.amazonaws.com";
-    $dbUsername = "DB_CL4_T2";
-    $dbPassword = ".Hy-x6BomrTe-aXMArWh";
-    $dbName = "dbgotogro";
-    $dbPort = 3306;
+    $dbHost="aws.connect.psdb.cloud";
+    $dbUsername="dwy9oxkxd97co32x0sod";
+    $dbPassword="pscale_pw_uXJK1HpHjxBpItIWdbsKoEbWe27vY9uiFtj30QYGynf";
+    $dbName="gotogrodb";
 
    /// new connection
-    $conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
-    if ($conn->connect_error) {
-        die('Connection failure: ' . $conn->connect_error);
-    }
-
+   $conn = mysqli_init();
+   $conn->ssl_set(NULL, NULL, "/etc/ssl/cert.pem", NULL, NULL);
+   $conn->real_connect($dbHost, $dbUsername, $dbPassword, $dbName);
 ?>
