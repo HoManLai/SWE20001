@@ -12,23 +12,9 @@ $state = trim($_POST["state"]);
 $postcode = trim($_POST["postcode"]);
 $dob = trim($_POST["dob"]);
 
-$validation = true;
-
-// all fields must be entered when submitting, otherwise will throw error
-$value = "";
-if (isset($memID))
-{
-	foreach($_POST as $key=>$value)
-	{
-		if($value == "")
-		{
-			$validation=false;
-		}
-	}
-}
-
 //only execute if it matches with memID
 $query = "SELECT * FROM member WHERE memID='$memID'";
+
 $result = mysqli_query($conn, $query);
 if (!$result) {
 	echo "<p>The entered Member ID does not match with any members";
@@ -41,20 +27,19 @@ else
 	//only input fields if they have input
 	foreach($_POST as $key=>$value)
 	{
-		if($value != "")
+		if($_POST[""])
 		{
-			if($_POST[""])
-			{
-				$fields .= "";
-			}
-			if($value != end($_POST))
-			{
-				$fields .= $key . " = '" . $value . "', ";
-			}
+			$fields .= "";
+		}
+		if($value != end($_POST))
+		{
+			$fields .= $key . " = '" . $value . "', ";
 		}
 	}
 
-	echo $query = "UPDATE member SET $fields WHERE memID=$memID";
+	$query = "UPDATE member SET $fields WHERE memID=$memID";
+
+	echo str_replace(", WHERE", " WHERE", $query);
 
 }
 ?>
