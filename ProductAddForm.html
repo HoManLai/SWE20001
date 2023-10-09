@@ -1,59 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<title>Product Add</title>
 	<meta charset="UTF-8"/>
-	<meta name="description"	content="List displaying members detail"/>
+	<meta name="description"	content="Member List"/>
 	<meta name="keywords"		  content="HTML, CSS, PHP, JavaScript"/>
 	<meta name="author"			  content="MSP_CL4_T2"/>
-	<title>Product Add</title>
 
+	<script src="scripts/MemberList.js"></script>
+	<link href="css/style.css" rel="stylesheet">
 </head>
-<body>
-	<!--Company Logo-->
-    <img src="Goto_Logo.png" alt="Goto Logo"  width="50" height="50" style="float:Left;"">
 
+<body>
 	<h1>Member Managment System</h1>
-	
-	<button class="Meun">Menu</button>
-	<div class="Meun">
-		<!--Add the html links-->
-	<a href="Main.html">Main</a>
-	<a href="AddMembers.html"> Member Registration</a>
-	<a href="MemberList.php">Members List</a>
-	<!--
-	<a href="MemberProfile.html">Members Profile</a>
-	-->
-	<a href="SalesRecord.php">Sales Record List</a>
-	<!--
-	<a href="SalesReport.html">Link 4</a>
-	-->
-	<a href="SalesRecord.php">Add product form</a>
-	</div>
-	<!--Filter button-->
-	<div id="filterMem">
-		<!--Add filterSelection-->
-		<button class="btn active" onclick="filterSelection('all')"> Show all</button>
-		<button class="btn" onclick="filterSelection('...')">...</button>
-		<button class="btn" onclick="filterSelection('...')">...</button>
-		<button class="btn" onclick="filterSelection('...')"> ...</button>
-		<button class="btn" onclick="filterSelection('...')">...</button>
+    <!--Company Logo-->
+    <img src="css\images\Goto_Logo.png" alt="Goto Logo"  width="50" height="50" style="float:Left;">
+
+	<!--Hoverable Menu (Add CSS to make it dropdown)-->
+	<div class="Menu">
+		<button class="Menu">Menu</button>
+		<div class="Menu">
+			<!--Add the html links-->
+		<a href="Main.html">Home</a>
+        <a href="MemberList.html">Members</a>
+        <a href="ProductList.html">Products</a>
+        <a href="SalesReport.html">Sales Report</a>
+
+		</div>
 	</div>
 	
-	<form method="post" action="ProductAdd.php">
+	<form method="post" action="ProductAdd.php" class="dbForm">
 		<fieldset><legend>New Product Details</legend>
-			<p><label for "pdName">Name: </p>
-				<input type="text" name="pdName" id="pdName" /></p>
-			<p><label for "category">Category: </p>
-				<input type="text" name="category" id="category" /></p>
-			<p><label for "price">Price: </p>
-				<input type="text" name="price" id="price" /></p>
-			<p><label for "supplier">Supplier: </p>
-				<input type="text" name="supplier" id="supplier" /></p>
-			<p><label for "description">Description: </p>
+			<label for "pdName">Name: </label>
+				<input type="text" name="pdName" id="pdName" />
+			<label for "category">Category: </label>
+				<input type="text" name="category" id="category" />
+			<label for "price">Price: </label>
+				<input type="text" name="price" id="price" />
+			<label for "supplier">Supplier: </label>
+				<input type="text" name="supplier" id="supplier" />
+			<label for "description">Description: </label>
 				<textarea rows="3" name="description" id="description" />
-	
 			
-			<p><input type="submit" name="Add New Product"/></p>
+			<input type="submit" name="Add New Product"/>
 	</form>
 
 </body>

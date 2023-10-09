@@ -1,9 +1,5 @@
-
 <?php
-	include ("config.php");
-
 	//triming whitespaces from form
-	//!!will need to add more to sanitise input more....!!
 	$memFirst = trim($_POST["memFirst"]);
 	$memLast = trim($_POST["memLast"]);
 	$phone = trim($_POST["phone"]);
@@ -16,22 +12,27 @@
 
 	$validation = true;
 
-	// all fields must be entered when submitting
+	// all fields must be entered when submitting, otherwise will throw error
 	$value = "";
-	foreach($_POST as $key=>$value)
+	if (isset($memFirst))
 	{
-		if($value == "")
+		foreach($_POST as $key=>$value)
 		{
-			$validation=false;
+			if($value == "")
+			{
+				$validation=false;
+			}
 		}
 	}
 
 	if ($validation)
 	{
+		include ("config.php");
+		 
 		$query = "INSERT INTO member"
-		."(memID, memFirst, memLast, phone, email, streetName, suburb, state, postcode, dob)"
+		."(memFirst, memLast, phone, email, streetName, suburb, state, postcode, dob)"
 		."VALUES"
-		."('$memIDresult', '$memFirst', '$memLast', '$phone', '$email', '$streetName', '$suburb', '$state', '$postcode', '$dob')";
+		."('$memFirst', '$memLast', '$phone', '$email', '$streetName', '$suburb', '$state', '$postcode', '$dob')";
 	
 		//execute query
 		$result = mysqli_query($conn, $query);
@@ -46,11 +47,6 @@
 			echo "<p>Successfully added new member </p>";
 			echo "<a href='MemberList.html'>View Members</a>";
 		}
-	}
-	else
-	{
-		echo "All fields are required</p>";
-		echo "<a href='MemberAdd.php'>Go Backs</a>";
 	}
 
 	mysqli_close($conn);

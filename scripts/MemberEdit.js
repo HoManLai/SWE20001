@@ -10,7 +10,7 @@ function init() {
 
     var xmlreq = new XMLHttpRequest();
     
-    xmlreq.open("POST", "php/MemberAdd.php");
+    xmlreq.open("POST", "php/MemberEdit.php");
     
     xmlreq.send(data);
 

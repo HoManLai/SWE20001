@@ -1,75 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<title>Member Edit</title>
 	<meta charset="UTF-8"/>
-	<meta name="description"	content="List displaying members detail"/>
+	<meta name="description"	content="Member List"/>
 	<meta name="keywords"		  content="HTML, CSS, PHP, JavaScript"/>
 	<meta name="author"			  content="MSP_CL4_T2"/>
-	<title>Members Edit</title>
-
-</head>
-<body>
-	<!--Company Logo-->
-    <img src="Goto_Logo.png" alt="Goto Logo"  width="50" height="50" style="float:Left;"">
-
-	<h1>Member Managment System</h1>
 	
+	<!-- script src="scripts/MemberList.js"></script -->
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<h1>Member Managment System</h1>
+    <!--Company Logo-->
+    <img src="css\images\Goto_Logo.png" alt="Goto Logo"  width="50" height="50" style="float:Left;">
+
 	<!--Hoverable Menu (Add CSS to make it dropdown)-->
-	<div class="Meun">
-		<button class="Meun">Menu</button>
-		<div class="Meun">
+	<div class="Menu">
+		<button class="Menu">Menu</button>
+		<div class="Menu">
 			<!--Add the html links-->
-		<a href="#">Link 1</a>
-		<a href="#">Link 2</a>
-		<a href="#">Link 3</a>
-		<a href="#">Link 4</a>
+		<a href="Main.html">Home</a>
+        <a href="MemberList.html">Members</a>
+        <a href="ProductList.html">Products</a>
+        <a href="SalesReport.html">Sales Report</a>
+
 		</div>
 	</div>
-	<!--Filter button-->
-	<div id="filterMem">
-		<!--Add filterSelection-->
-		<button class="btn active" onclick="filterSelection('all')"> Show all</button>
-		<button class="btn" onclick="filterSelection('...')">...</button>
-		<button class="btn" onclick="filterSelection('...')">...</button>
-		<button class="btn" onclick="filterSelection('...')"> ...</button>
-		<button class="btn" onclick="filterSelection('...')">...</button>
-	</div>
 	
-	<p></p>
 	<p>Any fields that are filled will be updated.</p>
-	<form method="post" action="php/MemberEdit.php">
-		<fieldset><legend>Edit Member Details</legend>
-			<p>**Required** <label for "memID">Member ID: </p>
-				<input type="text" name="memID" id="memID" /></p>
-			<p><label for "memFirst">First Name: </p>
-				<input type="text" name="memFirst" id="memFirst" /></p>
-			<p><label for "memLast">Last Name: </p>
-				<input type="text" name="memLast" id="memLast" /></p>
-			<p><label for "phone">Phone Number: </p>
-				<input type="text" name="phone" id="phone" /></p>
-			<p><label for "email">Email: </p>
-				<input type="text" name="email" id="email" /></p>
-			<p><label for "streetName">Address: </p>
-				<input type="text" name="streetName" id="streetName" /></p>
-			<p><label for "suburb">Suburb: </p>
-				<input type="text" name="suburb" id="suburb" /></p>
-			<p><label for="state">State:</label>
-				<select id="state" name="state">
-				<option value="ACT">ACT</option>
-				<option value="NSW">NSW</option>
-				<option value="NT">NT</option>
-				<option value="SA">SA</option>
-				<option value="TAS">TAS</option>
-				<option value="VIC">VIC</option>
-				<option value="WA">WA</option>
-				</select>
-			<p><label for "postcode">Postcode: </p>
-				<input type="text" name="postcode" id="postcode" /></p>
-			<p><label for "dob">Date of Birth: </p>
-				<input type="date" name="dob" id="dob" /></p>
-			
-			<p><input type="submit" name="Edit New Member"/></p>
-	</form>
+	<div class="container">
+		<form method="post"  class="dbForm">
+			<fieldset>
+				<legend>Edit Member Details</legend>
+				<label for "memID">Member ID: ** Required **</label>
+					<input type="text" name="memID" id="memID" />
+				<label for "memFirst">First Name: </label>
+					<input type="text" name="memFirst" id="memFirst" />
+				<label for "memLast">Last Name: </label>
+					<input type="text" name="memLast" id="memLast" />
+				<label for "phone">Phone Number: </label>
+					<input type="text" name="phone" id="phone" />
+				<label for "email">Email: </label>
+					<input type="text" name="email" id="email" />
+				<label for "streetName">Address: </label>
+					<input type="text" name="streetName" id="streetName" />
+				<label for "suburb">Suburb: </label>
+					<input type="text" name="suburb" id="suburb" />
+				<label for="state">State:</label>
+					<select id="state" name="state">
+					<option value=""> --- </option>
+					<option value="ACT">ACT</option>
+					<option value="NSW">NSW</option>
+					<option value="NT">NT</option>
+					<option value="SA">SA</option>
+					<option value="TAS">TAS</option>
+					<option value="VIC">VIC</option>
+					<option value="WA">WA</option>
+					</select>
+				<label for "postcode">Postcode: </label>
+					<input type="text" name="postcode" id="postcode" />
+				<label for "dob">Date of Birth: </label>
+					<input type="date" name="dob" id="dob" />
+				
+				<input type="submit" value="Edit Member"/>
+			</fieldset>
+		</form>
 
 </body>
 </html>
