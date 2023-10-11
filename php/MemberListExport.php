@@ -2,24 +2,22 @@
    include ("config.php");
 
    //all data from member table
-   $query->$conn->query("SELECT * FROM members ORDER BY id ASC");
+   $result = $conn->query("SELECT memID, memFirst, memLast, dob, phone, email, streetName, suburb, state, postcode FROM member");
 
-   echo json_encode($data);
+   $fp = fopen('../membertable.csv', 'w') or die("Unable to load file");
+
+    fputcsv($fp, ['Member ID', 'First Name', 'Last Name', 'Date of Birth', 'Phone', 'Email', 'Street Name', 'Suburb', 'State', 'Postcode']);
    
-   if(isset($_POST["export"]))  
-    {  
-        $connect = new PDO('mysql:host=localhost;dbname=123', '123', 'invoice123');
-        header('Content-Type: text/csv; charset=utf-8');  
-        header('Content-Disposition: attachment; filename=data.csv');  
-        $output = fopen("php://output", "w");  
-        fputcsv($output, array('
-    Invoice No.', 'Invoice Date', 'Student Name', 'Total Amount'));  
-        $query = "SELECT * from tbl_order";  
-        $result = mysqli_query($connect, $query);  
-        while($row = mysqli_fetch_assoc($result))  
-        {  
-            fputcsv($output, $row);  
-        }  
-        fclose($output);  
-    }  
+    while ($row = $result->fetch_assoc()) {
+        fputcsv($fp, $row);
+    }
+
+    fclose($fp);
+    $conn->close();
+
+    header('Content-Type: text/csv');
+    header('Content-Disposition: attachment; filename="membertable.csv"');
+    readfile('membertable.csv'); 
+    header('Location: ../MemberList.html');
+
  ?>

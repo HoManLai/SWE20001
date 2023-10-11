@@ -67,3 +67,64 @@ CREATE TABLE `sale` (
   PRIMARY KEY (`saleID`),
   UNIQUE KEY `saleID_UNIQUUE` (`saleID`)
 );
+
+
+/*
+DROP TABLE IF EXISTS category;
+CREATE TABLE category (
+  cateID INT(5) unsigned zerofill NOT NULL AUTO_INCREMENT,
+  cateName VARCHAR(50) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (cateID),
+  UNIQUE KEY cateID_UNIQUE (cateID)
+);
+
+ALTER TABLE product
+ADD cateID INT(5) unsigned zerofill NOT NULL,
+ADD KEY FK_cateID_category (cateID),
+CHANGE COLUMN cateID cateID INT(5) UNSIGNED ZEROFILL NOT NULL AFTER pdID,
+DROP COLUMN category;
+
+DROP TABLE IF EXISTS suppliers;
+CREATE TABLE suppliers (
+  supID INT(5) unsigned zerofill NOT NULL AUTO_INCREMENT,
+  supName VARCHAR(50) NOT NULL,
+  PRIMARY KEY (supID),
+  UNIQUE KEY supID_UNIQUE (supID)
+  );
+
+ALTER TABLE product
+ADD supID INT(5) unsigned zerofill NOT NULL,
+ADD KEY FK_supeID_suplier (supID);
+CHANGE COLUMN supID supID INT(5) UNSIGNED ZEROFILL NOT NULL AFTER cateID;
+DROP COLUMN supliers;
+  
+
+DROP TABLE IF EXISTS `sale`;
+CREATE TABLE `sale` (
+  `saleID` INT(5) unsigned zerofill NOT NULL AUTO_INCREMENT,
+  `memID` int(5) unsigned zerofill NOT NULL,
+  `pdID` int(5) unsigned zerofill NOT NULL,
+  `saleDate` datetime NOT NULL,
+  `totalPrice` decimal(10,2) unsigned NOT NULL,
+  `saleComment` TEXT,
+  PRIMARY KEY (`saleID`),
+  UNIQUE KEY `saleID_UNIQUE` (`saleID`),
+  KEY `FK_memID_member` (`memID`),
+  KEY `FK_pdID_product` (`pdID`)
+);
+
+DROP TABLE IF EXISTS `saleDetails`;
+CREATE TABLE `saleDetails` (
+  `saleDetailID` INT(5) unsigned zerofill NOT NULL AUTO_INCREMENT,
+  `saleID` int(5) unsigned zerofill NOT NULL,
+  `pdPrice` decimal(10,2) unsigned NOT NULL,
+  `pdID` int(5) unsigned zerofill NOT NULL,
+  `quantity` int unsigned NOT NULL,
+  `saleDate` datetime NOT NULL,
+  `itemComment` TEXT,
+  PRIMARY KEY (`saleDetailID`),
+  UNIQUE KEY `saleDetailID` (`saleDetailID`),
+  KEY `FK_saleID_sale` (`saleID`),
+  KEY `FK_pdID_product` (`pdID`);
+
+*/

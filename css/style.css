@@ -42,7 +42,8 @@ form input[type=submit], #submit {
     cursor: pointer;
     display: block;
   }
-  
+
+
 form input[type=submit]:hover {
     background-color: #45a049;
   }

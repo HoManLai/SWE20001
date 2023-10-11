@@ -50,9 +50,12 @@
 			<tbody id="memTable"></tbody> 
 			
 		</table></p>
-	</div>
 
-	<a href="MemberAddForm.html">Add Members</a>
+		<a href="MemberAddForm.html" class="addMem">Add Members</a>
+		<form method="post" action="php/MemberListExport.php" class="dbForm">
+			<input type='submit' value='Export to CSV' name='Export to CSV'/>
+		</form>
+	</div>
 
 </body>
 </html>
