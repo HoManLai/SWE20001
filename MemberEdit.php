@@ -14,16 +14,21 @@
 
 	<h1>Member Managment System</h1>
 	
-	<!--Hoverable Menu (Add CSS to make it dropdown)-->
+	<button class="Meun">Menu</button>
 	<div class="Meun">
-		<button class="Meun">Menu</button>
-		<div class="Meun">
-			<!--Add the html links-->
-		<a href="#">Link 1</a>
-		<a href="#">Link 2</a>
-		<a href="#">Link 3</a>
-		<a href="#">Link 4</a>
-		</div>
+		<!--Add the html links-->
+	<a href="Main.html">Main</a>
+	<a href="AddMembers.html"> Member Registration</a>
+	<a href="MemberList.php">Members List</a>
+	<!--
+	<a href="MemberProfile.html">Members Profile</a>
+	-->
+	<a href="SalesRecord.php">Sales Record List</a>
+	<!--
+	<a href="SalesReport.html">Link 4</a>
+
+	-->
+	<a href="SalesRecord.php">Add product form</a>
 	</div>
 
 		<?php
