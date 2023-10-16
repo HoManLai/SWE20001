@@ -76,7 +76,7 @@
 	<div class="container">
 		<form method="post"  class="dbForm">
 			<p>Do you really want to delete this member?</p>
-			<button><a href='MemberList.php'>Go Back to Member List</a></button>
+			<button><a href='MemberList.php'>Go Back</a></button>
 			<input id="submit" type="submit" name="submit" value="Confirm"/>
 		</form>
 

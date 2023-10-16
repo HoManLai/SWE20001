@@ -19,7 +19,8 @@
 }
 
 /* FORM PAGES */
-form input[type=text], input[type=email], input[type=date], select {
+form input[type=text], input[type=email], input[type=date], select, textarea {
+    font-size: 14px;
     padding: 12px 20px;
     margin: 8px 0;
     border: 1px solid #ccc;

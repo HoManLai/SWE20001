@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Member List</title>
+	<title>Member Edit Form</title>
 	<meta charset="UTF-8"/>
 	<meta name="description"	content="Member List"/>
 	<meta name="keywords"		  content="HTML, CSS, PHP, JavaScript"/>
@@ -20,10 +20,10 @@
 		<button class="Menu">Menu</button>
 		<div class="Menu">
 			<!--Add the html links-->
-		<a href="Main.html">Home</a>
+		<a href="Main.php">Home</a>
         <a href="MemberList.php">Members</a>
-        <a href="ProductList.html">Products</a>
-        <a href="SalesReport.html">Sales Report</a>
+        <a href="ProductList.php">Products</a>
+        <a href="SalesReport.php">Sales Report</a>
 
 		</div>
 	</div>
@@ -38,7 +38,6 @@
     //retrieve data from table
     $result = mysqli_query($conn, $query);
 
-    //store in array
     $row = mysqli_fetch_assoc($result);
 	$memFirst = $row['memFirst'];
 	$memLast = $row['memLast'];
@@ -55,6 +54,8 @@
 		<form method="post"  class="dbForm">
 			<fieldset>
 				<legend>Edit Member Details</legend>
+				<label for "memID">ID: </label>
+					<input type="text" name="memID" id="memID" value="<?php echo $memID ?>" readonly/>
 				<label for "memFirst">First Name: </label>
 					<input type="text" name="memFirst" id="memFirst" value="<?php echo $memFirst ?>"/>
 				<label for "memLast">Last Name: </label>
@@ -81,11 +82,13 @@
 				<label for "postcode">Postcode: </label>
 					<input type="text" name="postcode" id="postcode" value="<?php echo $postcode ?>"/>
 				<label for "dob">Date of Birth: </label>
-					<input type="date" name="dob" id="dob" value="<?php echo date("Y-m-d", strtotime($dob))?>"/>
+					<input type="date" name="dob" id="dob" value="<?php echo date("Y-m-d", strtotime($dob)) ?>" />
 				
 				<input id="submit" type="submit" value="Edit Member"/>
+				<button><a href='MemberList.php'>Go Back</a></button>
 			</fieldset>
 		</form>
+	</div>
 
 </body>
 </html>

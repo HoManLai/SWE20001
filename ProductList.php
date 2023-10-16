@@ -28,6 +28,7 @@
 		</div>
 	</div>
 
+	<h2 id=pgHeader>Products</h2>
     <div class="tbldata">
         <p><table>
             <thead><tr>
@@ -57,8 +58,8 @@
 						echo "<td>" . $row['price'] . "</td>";
 						echo "<td>" . $row['supplier'] . "</td>";
 						echo "<td>" . $row['description'] . "</td>";
-						echo "<td><button><a href=\"ProductEditForm.php?updateID=" . $row['memID'] . "\">Update</a></button>";
-						echo "<button><a href=\"ProductDeleteForm.php?deleteID=" . $row['memID'] . "\">Delete</a></button></td>";
+						echo "<td><button><a href=\"ProductEditForm.php?updateID=" . $row['pdID'] . "\">Update</a></button>";
+						echo "<button><a href=\"ProductDeleteForm.php?deleteID=" . $row['pdID'] . "\">Delete</a></button></td>";
 						echo "</tr>";
 					}
 				?>

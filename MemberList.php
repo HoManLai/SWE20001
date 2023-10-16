@@ -28,6 +28,7 @@
 		</div>
 	</div>
 
+	<h2 id=pgHeader>Members</h2>
 	<div class="tbldata">
 		<p><table>
 			<thead><tr>

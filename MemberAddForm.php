@@ -7,6 +7,7 @@
 	<meta name="keywords"		  content="HTML, CSS, PHP, JavaScript"/>
 	<meta name="author"			  content="MSP_CL4_T2"/>
 
+	<script src="scripts/MemberList.js"></script>
 	<link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -20,14 +21,16 @@
 		<button class="Menu">Menu</button>
 		<div class="Menu">
 			<!--Add the html links-->
-		<a href="Main.html">Home</a>
+		<a href="Main.php">Home</a>
         <a href="MemberList.php">Members</a>
-        <a href="ProductList.html">Products</a>
-        <a href="SalesReport.html">Sales Report</a>
+        <a href="ProductList.php">Products</a>
+        <a href="SalesReport.php">Sales Report</a>
 
 		</div>
 	</div>
 	
+
+	<h2 id=pgHeader>Member Add Form</h2>
 	<p>All fields are required</p>
 	<div class="container">
 		<span id="message"></span>
@@ -112,7 +115,7 @@
 		if (!$result) {
 			// remove when final
 			echo "<p>There is an issue with ", $query, " </p>";
-			echo "<a href='MemberAdd.php'>Go Backs</a>";
+			echo "<a href='MemberAdd.php'>Go Back</a>";
 		}
 		else
 		{

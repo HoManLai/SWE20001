@@ -28,6 +28,7 @@
 		</div>
 	</div>
 
+	<h2 id=pgHeader>Sales</h2>
 	<div class="tbldata">
 		<p><table>
 			<thead><tr>
@@ -58,8 +59,8 @@
 						echo "<td>" . $row['quantity'] . "</td>";
 						echo "<td>" . $row['saleDate'] . "</td>";
 						echo "<td>" . $row['salePrice'] . "</td>";
-						echo "<td><button><a href=\"SaleEditForm.php?updateID=" . $row['memID'] . "\">Update</a></button>";
-						echo "<button><a href=\"SaleDeleteForm.php?deleteID=" . $row['memID'] . "\">Delete</a></button></td>";
+						echo "<td><button><a href=\"SaleEditForm.php?updateID=" . $row['saleID'] . "\">Update</a></button>";
+						echo "<button><a href=\"SaleDeleteForm.php?deleteID=" . $row['saleID'] . "\">Delete</a></button></td>";
 						echo "</tr>";
 					}
 				?>
@@ -68,7 +69,7 @@
 		</table></p>
 	</div>
 
-	<a href="SalesAddForm.php">Manually Add Sales</a>
+	<button><a href="SalesAddForm.php">Manually Add Sales</a></button>
 
 </body>
 
