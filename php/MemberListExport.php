@@ -2,7 +2,7 @@
    include ("config.php");
 
    //all data from member table
-   $result = $conn->query("SELECT memID, memFirst, memLast, dob, phone, email, streetName, suburb, state, postcode FROM member");
+   $result = $conn->query("SELECT * FROM member");
 
    $fp = fopen('../membertable.csv', 'w') or die("Unable to load file");
 
@@ -18,6 +18,6 @@
     header('Content-Type: text/csv');
     header('Content-Disposition: attachment; filename="membertable.csv"');
     readfile('membertable.csv'); 
-    header('Location: ../MemberList.html');
+    header('Location: ../MemberList.php');
 
  ?>

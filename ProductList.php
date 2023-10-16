@@ -69,6 +69,9 @@
     </div>
 
 	<a href="ProductAddForm.php">Add Products</a>
+	<form method="post" action="php/ProductListExport.php" class="dbForm">
+		<input type='submit' value='Export to CSV' name='Export to CSV'/>
+	</form>
 </body>
 
 </html>

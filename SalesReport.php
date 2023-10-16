@@ -70,6 +70,9 @@
 	</div>
 
 	<button><a href="SalesAddForm.php">Manually Add Sales</a></button>
+	<form method="post" action="php/SaleReportExport.php" class="dbForm">
+		<input type='submit' value='Export to CSV' name='Export to CSV'/>
+	</form>
 
 </body>
 

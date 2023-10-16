@@ -49,7 +49,7 @@
 	<div class="container">
 		<form method="post" class="dbForm">
 			<fieldset>
-			<legend>Manual Sale Entry</legend>
+			<legend>Update Sale Entry</legend>
 				<label for="saleID">Sale ID: </label>
 					<input type="text" name="saleID" id="saleID" value="<?php echo $saleID ?>" readonly/>
 				<label for="memID">Member ID: </label>
