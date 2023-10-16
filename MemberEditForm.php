@@ -21,7 +21,7 @@
 		<div class="Menu">
 			<!--Add the html links-->
 		<a href="Main.html">Home</a>
-        <a href="MemberList.html">Members</a>
+        <a href="MemberList.php">Members</a>
         <a href="ProductList.html">Products</a>
         <a href="SalesReport.html">Sales Report</a>
 
@@ -143,7 +143,7 @@
 		{
 			//success message
 			echo "<p>Successfully updated member </p>";
-			header('location:MemberList.html');
+			header('location:MemberList.php');
 		}
 	}
 

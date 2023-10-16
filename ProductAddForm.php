@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Product Edit</title>
+	<title>Product Add</title>
 	<meta charset="UTF-8"/>
 	<meta name="description"	content="Member List"/>
 	<meta name="keywords"		  content="HTML, CSS, PHP, JavaScript"/>
@@ -21,15 +21,15 @@
 		<button class="Menu">Menu</button>
 		<div class="Menu">
 			<!--Add the html links-->
-		<a href="Main.html">Home</a>
-        <a href="MemberList.html">Members</a>
-        <a href="ProductList.html">Products</a>
-        <a href="SalesReport.html">Sales Report</a>
+		<a href="Main.php">Home</a>
+        <a href="MemberList.php">Members</a>
+        <a href="ProductList.php">Products</a>
+        <a href="SalesReport.php">Sales Report</a>
 
 		</div>
 	</div>
 	
-	<form method="post" action=php/ProductEdit.php" class="dbForm">
+	<form method="post" action="ProductAdd.php" class="dbForm">
 		<fieldset><legend>New Product Details</legend>
 			<label for "pdName">Name: </label>
 				<input type="text" name="pdName" id="pdName" />
@@ -41,7 +41,6 @@
 				<input type="text" name="supplier" id="supplier" />
 			<label for "description">Description: </label>
 				<textarea rows="3" name="description" id="description" />
-	
 			
 			<input type="submit" name="Add New Product"/>
 	</form>

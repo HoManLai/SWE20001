@@ -21,7 +21,7 @@
 		<div class="Menu">
 			<!--Add the html links-->
 		<a href="Main.html">Home</a>
-        <a href="MemberList.html">Members</a>
+        <a href="MemberList.php">Members</a>
         <a href="ProductList.html">Products</a>
         <a href="SalesReport.html">Sales Report</a>
 
@@ -76,7 +76,7 @@
 	<div class="container">
 		<form method="post"  class="dbForm">
 			<p>Do you really want to delete this member?</p>
-			<button><a href='MemberList.html'>Go Back to Member List</a></button>
+			<button><a href='MemberList.php'>Go Back to Member List</a></button>
 			<input id="submit" type="submit" name="submit" value="Confirm"/>
 		</form>
 
@@ -94,13 +94,13 @@
 		$result = mysqli_query($conn, $query);
 		if (!$result) {
 			echo "<p>There is an issue with ", $query, " </p>";
-			echo "<a href='MemberList.html'>Go Back</a>";
+			echo "<a href='MemberList.php'>Go Back</a>";
 		}
 		else
 		{
 			//success 
 			echo "<p>Successfully deleted member </p>";
-			header('location:MemberList.html');
+			header('location:MemberList.php');
 		}
 	}
 

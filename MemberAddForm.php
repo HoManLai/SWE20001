@@ -21,7 +21,7 @@
 		<div class="Menu">
 			<!--Add the html links-->
 		<a href="Main.html">Home</a>
-        <a href="MemberList.html">Members</a>
+        <a href="MemberList.php">Members</a>
         <a href="ProductList.html">Products</a>
         <a href="SalesReport.html">Sales Report</a>
 
@@ -118,7 +118,7 @@
 		{
 			//success message
 			echo "<p>Successfully added new member </p>";
-			echo "<a href='MemberList.html'>View Members</a>";
+			echo "<a href='MemberList.php'>View Members</a>";
 		}
 	}
 	else
