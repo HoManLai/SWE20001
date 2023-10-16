@@ -45,6 +45,7 @@
 
 			<?php 
 			include ("php/config.php");
+			
 
 			$memID=$_GET["deleteID"];
 
@@ -75,7 +76,7 @@
 	<div class="container">
 		<form method="post"  class="dbForm">
 			<p>Do you really want to delete this member?</p>
-			<input id="submit" type="submit" value="Confirm"/>
+			<input id="submit" type="submit" name="submit" value="Confirm"/>
 		</form>
 
 </body>
@@ -83,12 +84,10 @@
 
 
 <?php
-	include ("php/config.php");
 	// all fields must be entered when submitting, otherwise will throw error
-	$value = "";
-	if (isset($POST["submit"]))
+	if (isset($_POST['submit']))
 	{	
-		echo $query = "DELETE member WHERE memID=" . $memID . ";";
+		echo $query = "DELETE FROM member WHERE memID=" . $memID . ";";
 	
 		//execute query
 		$result = mysqli_query($conn, $query);
