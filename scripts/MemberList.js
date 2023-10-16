@@ -33,11 +33,10 @@ xmlreq.onreadystatechange= function()
                         str += "<td>" + suburb + "</td>";
                         str += "<td>" + state + "</td>";
                         str += "<td>" + postcode + "</td>";
-                        str += "<td>" + memIcon + "</td>";
                         //edit specific member
-                        str += "<td><button><a href=\"MemberEditPage.php?updateID=" + memID + "\">Update</a></button>";
+                        str += "<td><button><a href=\"MemberEditForm.php?updateID=" + memID + "\">Update</a></button>";
                         //delete specific member
-                        str += "<button><a href=\"MemberDeletePage.php?deleteID=" + memID + "\">Delete</a></button></td>";
+                        str += "<button><a href=\"MemberDeleteForm.php?deleteID=" + memID + "\">Delete</a></button></td>";
                         str += "</tr>";
                 }
 
