@@ -12,42 +12,41 @@
 </head>
 
 <body>
-	<h1>Member Managment System</h1>
-    <!--Company Logo-->
-    <img src="css\images\Goto_Logo.png" alt="Goto Logo"  width="50" height="50" style="float:Left;">
-
-	<!--Hoverable Menu (Add CSS to make it dropdown)-->
-	<div class="Menu">
-		<button class="Menu">Menu</button>
-		<div class="Menu">
-			<!--Add the html links-->
-		<a href="Main.php">Home</a>
-        <a href="MemberList.php">Members</a>
-        <a href="ProductList.php">Products</a>
-        <a href="SalesReport.php">Sales Report</a>
-
+	<div class='nav'>
+		<img id='logo' src="css\images\Goto_Logo.png" alt="Goto Logo"  width="50" height="50" style="float:Left;">
+		<h1 id='title'>GotoGro MRM</h1>
+	
+		<div class="menu">
+			<a href="Main.php">Home</a>
+			<a href="MemberList.php">Members</a>
+			<a href="ProductList.php">Products</a>
+			<a href="SalesReport.php">Sales Report</a>
 		</div>
 	</div>
-	
-	<h2 id=pgHeader>Product Add Form</h2>
-	<p>All fields are required</p>
-	<div class="container">
-		<span id="message"></span>
-		<form method="post" class="dbForm">
-			<fieldset><legend>New Product Details</legend>
-				<label for "pdName">Name: </label>
-					<input type="text" name="pdName" id="pdName" />
-				<label for "category">Category: </label>
-					<input type="text" name="category" id="category" />
-				<label for "price">Price: </label>
-					<input type="text" name="price" id="price" />
-				<label for "supplier">Supplier: </label>
-					<input type="text" name="supplier" id="supplier" />
-				<label for "description">Description: </label>
-					<textarea rows="3" name="description" id="description"></textarea>
-				
-				<input type="submit" name="Add New Product"/>
-		</form>
+
+	<div class='content'>
+		<h2 id=pgHeader>Product Add Form</h2>
+		<p>All fields are required</p>
+		<div class="container">
+			<span id="message"></span>
+			<form method="post" class="dbForm">
+				<fieldset>
+					<legend>New Product Details</legend>
+					<label for "pdName">Name: </label>
+						<input type="text" name="pdName" id="pdName" />
+					<label for "category">Category: </label>
+						<input type="text" name="category" id="category" />
+					<label for "price">Price: </label>
+						<input type="text" name="price" id="price" />
+					<label for "supplier">Supplier: </label>
+						<input type="text" name="supplier" id="supplier" />
+					<label for "description">Description: </label>
+						<textarea rows="3" name="description" id="description"></textarea>
+					
+					<input type="submit" name="Add New Product"/>
+				</fieldset>
+			</form>
+		</div>
 	</div>
 
 </body>
