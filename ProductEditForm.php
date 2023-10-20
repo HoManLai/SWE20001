@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Product Edit Formt</title>
+	<title>Product Edit Form</title>
 	<meta charset="UTF-8"/>
 	<meta name="description"	content="Member List"/>
 	<meta name="keywords"		  content="HTML, CSS, PHP, JavaScript"/>
@@ -11,20 +11,15 @@
 </head>
 
 <body>
-	<h1>Member Managment System</h1>
-    <!--Company Logo-->
-    <img src="css\images\Goto_Logo.png" alt="Goto Logo"  width="50" height="50" style="float:Left;">
-
-	<!--Hoverable Menu (Add CSS to make it dropdown)-->
-	<div class="Menu">
-		<button class="Menu">Menu</button>
-		<div class="Menu">
-			<!--Add the html links-->
-		<a href="Main.php">Home</a>
-        <a href="MemberList.php">Members</a>
-        <a href="ProductList.php">Products</a>
-        <a href="SalesReport.php">Sales Report</a>
-
+	<div class='nav'>
+		<img id='logo' src="css\images\Goto_Logo.png" alt="Goto Logo"  width="50" height="50" style="float:Left;">
+		<h1 id='title'>GotoGro MRM</h1>
+	
+		<div class="menu">
+			<a href="Main.php">Home</a>
+			<a href="MemberList.php">Members</a>
+			<a href="ProductList.php">Products</a>
+			<a href="SalesReport.php">Sales Report</a>
 		</div>
 	</div>
 
@@ -46,30 +41,31 @@
 	$supplier = $row['supplier'];
 	$description = $row['description'];
 	?>
+
+	<div class='content'>
+		<div class="container">
+			<form method="post" class="dbForm">
+				<fieldset>
+					<legend>New Product Details</legend>
+					<label for="pdID">ID: </label>
+						<input type="text" name="pdID" id="pdID" value="<?php echo $pdID ?>" readonly/>
+					<label for="pdName">Name: </label>
+						<input type="text" name="pdName" id="pdName" value="<?php echo $pdName ?>"/>
+					<label for="category">Category: </label>
+						<input type="text" name="category" id="category" value="<?php echo $category ?>"/>
+					<label for="price">Price: </label>
+						<input type="text" name="price" id="price" value="<?php echo $price ?>"/>
+					<label for="supplier">Supplier: </label>
+						<input type="text" name="supplier" id="supplier" value="<?php echo $supplier ?>"/>
+					<label for="description">Description: </label>
+						<textarea rows="3" name="description" id="description"><?php echo $description ?></textarea>
 	
-	<div class="container">
-		<form method="post" class="dbForm">
-			<fieldset>
-				<legend>New Product Details</legend>
-				<label for="pdID">ID: </label>
-					<input type="text" name="pdID" id="pdID" value="<?php echo $pdID ?>" readonly/>
-				<label for="pdName">Name: </label>
-					<input type="text" name="pdName" id="pdName" value="<?php echo $pdName ?>"/>
-				<label for="category">Category: </label>
-					<input type="text" name="category" id="category" value="<?php echo $category ?>"/>
-				<label for="price">Price: </label>
-					<input type="text" name="price" id="price" value="<?php echo $price ?>"/>
-				<label for="supplier">Supplier: </label>
-					<input type="text" name="supplier" id="supplier" value="<?php echo $supplier ?>"/>
-				<label for="description">Description: </label>
-					<textarea rows="3" name="description" id="description"><?php echo $description ?></textarea>
-
-				<input id="submit" type="submit" value="Edit Product"/>
-				<button><a href='ProductList.php'>Go Back</a></button>
-			</fieldset>
-		</form>
+					<input id="submit" type="submit" value="Edit Product"/>
+					<button><a href='ProductList.php'>Go Back</a></button>
+				</fieldset>
+			</form>
+		</div>
 	</div>
-
 </body>
 </html>
 
