@@ -11,44 +11,40 @@
 </head>
 
 <body>
-	<h1>Member Managment System</h1>
-    <!--Company Logo-->
-    <img src="css\images\Goto_Logo.png" alt="Goto Logo"  width="50" height="50" style="float:Left;">
-
-	<!--Hoverable Menu (Add CSS to make it dropdown)-->
-	<div class="Menu">
-		<button class="Menu">Menu</button>
-		<div class="Menu">
-			<!--Add the html links-->
-		<a href="Main.php">Home</a>
-        <a href="MemberList.php">Members</a>
-        <a href="ProductList.php">Products</a>
-        <a href="SalesReport.php">Sales Report</a>
-
+	<div class='nav'>
+		<img id='logo' src="css\images\Goto_Logo.png" alt="Goto Logo"  width="50" height="50" style="float:Left;">
+		<h1 id='title'>GotoGro MRM</h1>
+	
+		<div class="menu">
+			<a href="Main.php">Home</a>
+			<a href="MemberList.php">Members</a>
+			<a href="ProductList.php">Products</a>
+			<a href="SalesReport.php">Sales Report</a>
 		</div>
 	</div>
-	
-	<h2 id=pgHeader>Manual Sale Entry</h2>
-	<p>All fields are required</p>
-	<div class="container">
-		<span id="message"></span>
-		<form method="post" class="dbForm">
-			<fieldset><legend>Manual Sale Entry</legend>
-				<label for="memID">Member ID: </label>
-					<input type="text" name="memID" id="memID" />
-				<label for="pdID">Product ID: </label>
-					<input type="text" name="pdID" id="categopdIDry" />
-				<label for="price">Price: </label>
-					<input type="text" name="price" id="price" />
-				<label for="quantity">Quantity: </label>
-					<input type="text" name="quantity" id="quantity" />
-				<label for="date">Sales Date</label>
-					<input type="datetime-local" name="date" id="date" >
-				
-				<input type="submit" name="Add New Sale"/>
-		</form>
-	</div>
 
+	<div class='content'>
+		<h2 id=pgHeader>Manual Sale Entry</h2>
+		<p>All fields are required</p>
+		<div class="container">
+			<span id="message"></span>
+			<form method="post" class="dbForm">
+				<fieldset><legend>Manual Sale Entry</legend>
+					<label for="memID">Member ID: </label>
+						<input type="text" name="memID" id="memID" />
+					<label for="pdID">Product ID: </label>
+						<input type="text" name="pdID" id="categopdIDry" />
+					<label for="price">Price: </label>
+						<input type="text" name="price" id="price" />
+					<label for="quantity">Quantity: </label>
+						<input type="text" name="quantity" id="quantity" />
+					<label for="date">Sales Date</label>
+						<input type="datetime-local" name="date" id="date" >
+					
+					<input type="submit" name="Add New Sale"/></fieldset>
+			</form>
+		</div>
+	</div>
 </body>
 </html>
 
