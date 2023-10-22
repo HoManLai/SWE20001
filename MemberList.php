@@ -1,105 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<title>Member List</title>
 	<meta charset="UTF-8"/>
-	<meta name="description"	content="List displaying members detail"/>
+	<meta name="description"	content="Member List"/>
 	<meta name="keywords"		  content="HTML, CSS, PHP, JavaScript"/>
 	<meta name="author"			  content="MSP_CL4_T2"/>
-	<title>Members List</title>
 
-	<script src="script src="scripts/session.js"></script>
+	<link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
-	<!--Company Logo-->
-    <img src="Goto_Logo.png" alt="Goto Logo"  width="50" height="50" style="float:Left;">
-
 	<h1>Member Managment System</h1>
-	
+    <!--Company Logo-->
+    <img src="css\images\Goto_Logo.png" alt="Goto Logo"  width="50" height="50" style="float:Left;">
+
 	<!--Hoverable Menu (Add CSS to make it dropdown)-->
-	<div class="Meun">
-		<button class="Meun">Menu</button>
-		<div class="Meun">
+	<div class="Menu">
+		<button class="Menu">Menu</button>
+		<div class="Menu">
 			<!--Add the html links-->
-		<a href="Main.html">Main</a>
-		<a href="AddMembers.html"> Member Registration</a>
-        <a href="MemberList.php">Members List</a>
-		<!--
-        <a href="MemberProfile.html">Members Profile</a>
-        -->
-        <a href="SalesRecord.php">Sales Record List</a>
-        <!--
-        <a href="SalesReport.html">Link 4</a>
-        -->
-		<a href="SalesRecord.php">Add product form</a>
+		<a href="Main.php">Home</a>
+        <a href="MemberList.php">Members</a>
+        <a href="ProductList.php">Products</a>
+        <a href="SalesReport.php">Sales Report</a>
+
 		</div>
-	<!--Filter button-->
-	<div id="filterMem">
-		<!--Add filterSelection-->
-		<button class="btn active" onclick="filterSelection('all')"> Show all</button>
-		<button class="btn" onclick="filterSelection('...')">...</button>
-		<button class="btn" onclick="filterSelection('...')">...</button>
-		<button class="btn" onclick="filterSelection('...')"> ...</button>
-		<button class="btn" onclick="filterSelection('...')">...</button>
 	</div>
-	<!--Sort by Asc or Desec alphabetically-->
-	<button onclick="sortList()">Sort</button>
-	<!--Generate Report-->
-	<button onclick="">Generate Report</button>
-	<!--Table for showing members information-->
-	<table style="border: 1px solid black; margin-left:auto; margin-right:auto;">
-		<caption>Members List</caption>
-		<!--Title-->
-		
-		<?php
-       include ("config.php");
-       $query =  "select * from member";
-       $result = mysqli_query($conn, $query);
-    	?>
 
-		<table border="1">
-		<tr>
-			<th>Members ID</th>
-			<th>First Name</th>
-			<th>Last Name</th>
-			<th>Phone</th>
-			<th>Email</th>
-			<th>Address</th>
-			<th>Suburb</th>
-			<th>State</th>
-			<th>Postcode</th>
-			<th>Date of Birth</th>
-			<th>View</th>
-		</tr>
-		<tr>
+	<h2 id=pgHeader>Members</h2>
+	<div class="tbldata">
+		<p><table>
+			<thead><tr>
+				<th>Member ID</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Date of Birth</th>
+				<th>Phone</th>
+				<th>Email</th>
+				<th>Street Name</th>
+				<th>Suburb</th>
+				<th>State</th>
+				<th>Postcode</th>
+				<th>Settings</th>
+			</tr></thead>
 
-		<?php
-			while ($row = mysqli_fetch_assoc($result))
-			{
-		?>
+			<!-- display data -->
+			<tbody id="phpTable">
+				<?php 
+					include ("php/config.php");
+				
+					//all data from member table
+					$query = "SELECT * FROM member";
+				
+					//retrieve data from table
+					$result = mysqli_query($conn, $query);
+				
+					//store in array
+					while ($row = mysqli_fetch_assoc($result)) {
+						echo "<tr>";
+						echo "<td>" . $row['memID'] . "</td>";
+						echo "<td>" . $row['memFirst'] . "</td>";
+						echo "<td>" . $row['memLast'] . "</td>";
+						echo "<td>" . date("Y-m-d", strtotime($row['dob'])) . "</td>";
+						echo "<td>" . $row['phone'] . "</td>";
+						echo "<td>" . $row['email'] . "</td>";
+						echo "<td>" . $row['streetName'] . "</td>";
+						echo "<td>" . $row['suburb'] . "</td>";
+						echo "<td>" . $row['state'] . "</td>";
+						echo "<td>" . $row['postcode'] . "</td>";
+						echo "<td><button><a href=\"MemberEditForm.php?updateID=" . $row['memID'] . "\">Update</a></button>";
+						echo "<button><a href=\"MemberDeleteForm.php?deleteID=" . $row['memID'] . "\">Delete</a></button></td>";
+						echo "</tr>";
+					}
+				?>
+			</tbody> 
+			
+		</table></p>
 
-        <td><?php echo $row['memID']; ?></td>
-        <td><?php echo $row['memFirst']; ?></td>
-        <td><?php echo $row['memLast']; ?></td>
-        <td><?php echo $row['phone']; ?></td>
-        <td><?php echo $row['email']; ?></td>
-        <td><?php echo $row['streetName']; ?></td>
-        <td><?php echo $row['suburb']; ?></td>
-        <td><?php echo $row['state']; ?></td>
-        <td><?php echo $row['postcode']; ?></td>
-        <td><?php 
-        echo $row['dob']; ?>
-        </td>
-        <td><?php echo $row['memIcon']; ?></td>
-        
-		</tr>
-		<?php 
-			}
-		?>
-
-	</table>
-
-	<a href="MemberEditForm.html">Edit Members</a>
-	<a href="MemberAddForm.html">Add Members</a>
+		<button><a href="MemberAddForm.php" class="addMem">Add Members</a></button>
+		<form method="post" action="php/MemberListExport.php" class="dbForm">
+			<input type='submit' value='Export to CSV' name='Export to CSV'/>
+		</form>
+	</div>
 
 </body>
 </html>
